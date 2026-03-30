@@ -10,14 +10,14 @@
   {#each items as item}
     <!-- content here -->
 
-    <Card title={item.title} summary={item.summary} source={item.source} />
+    <Card
+      title={item.title}
+      summary={item.summary}
+      source={item.source}
+      image={item.image}
+      github={item.github}
+    />
   {/each}
-
-  <Card
-    title="Hello world"
-    summary="This is a summary of helloworld"
-    source="https://www.google.com"
-  />
 </div>
 
 <style>
@@ -29,7 +29,6 @@
     flex-direction: column;
     align-items: center;
 
-    padding: 20vh;
     min-height: 100vh; /* 🔥 important */
     background: radial-gradient(#0a192f, #1a0f2e);
 
@@ -43,7 +42,6 @@
 
   p {
     font-size: 20px;
-    max-width: 800px;
     padding: 10vh;
   }
 </style>

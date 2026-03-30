@@ -3,17 +3,47 @@
 </script>
 
 <a class="card" href={link.source} target="_blank">
+  {#if link.image}
+    <img src={link.image} alt={link.summary} />
+  {/if}
   <h3>{link.title}</h3>
   <p>{link.summary}</p>
 </a>
+{#if link.github}
+  <a class="github" target="_blank" href={link.github}>Github</a>
+{/if}
 
 <style>
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .github {
+    margin-top: 10px;
+    align-self: flex-start;
+    background: #7fff00;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px auto;
+  }
+
+  .github:hover {
+    background: #5cff00;
+
+    margin: 20px auto;
+  }
   .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    width: 80%;
+    width: 70%;
     margin: 20px auto;
     padding: 20px;
 
@@ -49,8 +79,7 @@
   /* 📱 Mobile */
   @media (max-width: 720px) {
     .card {
-      width: 95%;
-      padding: 15px;
+      width: 75%;
     }
 
     h3 {

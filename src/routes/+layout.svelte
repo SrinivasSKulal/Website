@@ -12,7 +12,9 @@
 <div class="app">
   <Header />
   <div class="main">
-    <Sidebar />
+    <div class="sidebar-wrapper">
+      <Sidebar />
+    </div>
     <div class="content">
       {@render children()}
     </div>
@@ -32,14 +34,19 @@
     padding: 0;
     height: 100vh;
   }
-
   .main {
     display: flex;
     flex: 1;
   }
-
   .content {
     flex: 1;
-    border: solid black 3px;
+  }
+  .sidebar-wrapper {
+    display: none;
+  }
+  @media (min-width: 769px) {
+    .sidebar-wrapper {
+      display: flex;
+    }
   }
 </style>

@@ -5,16 +5,24 @@
 <div class="sidebar">
   <h3>About Me</h3>
   <p>
-    I love linxu (currently using Fedora 43) and CLI/TUI's . Sci-fi and Robots
-    are what i dream about and Fallout and Gundam are few of my favourite
-    series. I always appreciate things that can go boom
+    I love linux (currently using Fedora 43) and CLI/TUI's . Sci-fi and Robots
+    🤖 are what I dream about and Fallout and Gundam are few of my favourite
+    series. I always appreciate things that can go boom 💥.
   </p>
   <h3>Contact Info</h3>
-  <p>
-    <b> Email</b>
-    <br />srinivaskulalwork@gmail.com
-    <b>Linkedin</b> <br />Link
+  <p class="links">
+    <b> <a class="link" href="srinivaskulalwork@gmail.com">Email</a></b>
+    <b
+      ><a
+        class="link"
+        href="https://www.linkedin.com/in/srinivas-kulal-7a4069253/">Linkedin</a
+      ></b
+    >
+    <b><a class="link" href="https://github.com/SrinivasSKulal">Github</a></b>
+
+    <b><a class="link" href="/resume.pdf">Resume</a></b>
   </p>
+
   <div class="container">
     <!-- Pole -->
 
@@ -59,15 +67,34 @@
   .square {
     width: 30px;
     height: 30px;
-    background: crimson;
+    background: #8a00c4;
 
     animation: sway 2s infinite ease-in-out;
 
     animation-delay: calc(var(--i) * 0.1s);
   }
+  .links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* important for mobile */
+  }
+  .link {
+    align-self: flex-start;
+    background: #7fff00;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px 20px;
+  }
+
+  .link:hover {
+    background: #5cff00;
+  }
   @media (min-width: 720p) {
     .sidebar {
-      display: block;
+      display: none;
     }
   }
   @keyframes sway {
@@ -101,5 +128,7 @@
   p {
     color: white;
     padding: 10px 10px;
+    font-size: 16px;
+    font-weight: 600;
   }
 </style>
